@@ -52,8 +52,7 @@
                             [ngClass]="{'pulse': i == selected_index, 'jackInTheBox': i != selected_index}"
                             (click)="gotoUserProfile(jugador, i)">
                             <div class="perfilImagen">
-                                <img *ngIf="! jugador.link_img" src="assets/img/default.png"
-                                    class="profileTableImg">
+                                <img *ngIf="! jugador.link_img" src="assets/img/default.png" class="profileTableImg">
                                 <img *ngIf="jugador.link_img"
                                     src="{{ serverUrl +'/storage/profiles/' + jugador.link_img}}"
                                     class="profileTableImg">

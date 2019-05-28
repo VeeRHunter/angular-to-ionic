@@ -10,7 +10,7 @@ import { PageStatusService } from '../../services/page-status';
   styleUrls: ['./filter.component.scss']
 })
 export class FilterComponent implements OnChanges {
-  
+
   filterForm = new FormGroup({
     search: new FormControl(''),
     fromAge: new FormControl(''),
@@ -25,19 +25,20 @@ export class FilterComponent implements OnChanges {
 
   posicion: string;
   positionDatas: string[];
-  is_details_loaded: boolean = false;
-  menu_opened: boolean = false;
+  is_details_loaded = false;
+  menu_opened = false;
 
+  // tslint:disable-next-line:no-input-rename
   @Input('search') search: string;
 
   @Output() filterData = new EventEmitter<FormGroup>();
   @Output() menuChanged = new EventEmitter<boolean>();
 
-  @ViewChild("filterMenu", {read: ElementRef}) filterMenu: ElementRef;
+  @ViewChild('filterMenu', { read: ElementRef }) filterMenu: ElementRef;
 
   @HostListener('document:click', ['$event'])
   clickout(event) {
-    if(this.filterMenu.nativeElement.contains(event.target)) {
+    if (this.filterMenu.nativeElement.contains(event.target)) {
       this.menu_opened = true;
       this.menuChanged.emit(this.menu_opened);
     } else {
@@ -49,7 +50,7 @@ export class FilterComponent implements OnChanges {
   constructor(private router: Router,
               private filterService: FilterService,
               public pageStatusService: PageStatusService) {
-    
+
   }
 
   onSubmit() {
@@ -64,7 +65,7 @@ export class FilterComponent implements OnChanges {
     this.filterService.getPosition().subscribe(position => {
       this.positionDatas = position;
       this.is_details_loaded = true;
-    })
+    });
   }
 
   onClickPopupButton() {

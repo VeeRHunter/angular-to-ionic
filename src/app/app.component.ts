@@ -59,7 +59,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 	constructor(
 		private router: Router,
 		public pageStatusService: PageStatusService
-	) {}
+	) { }
 
 	ngOnInit() {
 		$('#main-nicescrollable').niceScroll({
@@ -86,8 +86,8 @@ export class AppComponent implements OnInit, AfterViewInit {
 		if (playPromise !== undefined) {
 			playPromise.then(_ => {
 			})
-			.catch(error => {
-			});
+				.catch(error => {
+				});
 		}
 	}
 

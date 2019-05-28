@@ -1,18 +1,18 @@
 <div class="container photoswipe-dialog">
-    <div class="photoswipe-wrapper">
-      <div class="row no-gutters" *ngIf="userProfileService.images.length">
-        <div class="col-4" *ngFor="let image of userProfileService.images; let i =index;">
-          <div *ngIf="image && image.fileType == 'image'" class="photoswipe-item">
-            <a href="{{image.path}}">
-              <img src="{{image.path}}" alt="Image description" class="img-responsive">
-            </a>
-          </div>
-          <div *ngIf="image && image.fileType == 'video'" class="photoswipe-item" [ngClass]="image? i + 'item': ''">
-          </div>
+  <div class="photoswipe-wrapper">
+    <div class="row no-gutters" *ngIf="userProfileService.images.length">
+      <div class="col-4" *ngFor="let image of userProfileService.images; let i =index;">
+        <div *ngIf="image && image.fileType == 'image'" class="photoswipe-item">
+          <a href="{{image.path}}">
+            <img src="{{image.path}}" alt="Image description" class="img-responsive">
+          </a>
+        </div>
+        <div *ngIf="image && image.fileType == 'video'" class="photoswipe-item" [ngClass]="image? i + 'item': ''">
         </div>
       </div>
     </div>
   </div>
+</div>
 
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="pswp__bg"></div>
