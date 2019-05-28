@@ -50,7 +50,7 @@ export class PhotoSwipeComponent implements OnInit, AfterViewInit {
         $('.' + i + 'item').each(function(key) {
           // console.log("jimage=",i, images[i]);
           // tslint:disable-next-line:max-line-length
-          $(this).html('<a href="#" data-type="video" data-video=\'<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="' + images[i].path + '" frameborder="0" allowfullscreen></iframe></div></div>\'><img src="../../app/assets/img/playvideo-64-64-0.png" class="img-responsive"></a>');
+          $(this).html('<a href="#" data-type="video" data-video=\'<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="' + images[i].path + '" frameborder="0" allowfullscreen></iframe></div></div>\'><img src="assets/img/playvideo-64-64-0.png" class="img-responsive"></a>');
         });
       }
     }
@@ -60,7 +60,7 @@ export class PhotoSwipeComponent implements OnInit, AfterViewInit {
     //     if(images[index].fileType == 'video'){
     //       console.log("jimage=",index, images[index]);
     // tslint:disable-next-line:max-line-length
-    //       $('.'+index+'item').append('<a href="#" data-type="video" data-video=\'<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="'+ images[index].path+'" frameborder="0" allowfullscreen></iframe></div></div>\'><img src="../../app/assets/img/playvideo-64-64-0.png" class="img-responsive"></a>');
+    //       $('.'+index+'item').append('<a href="#" data-type="video" data-video=\'<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="'+ images[index].path+'" frameborder="0" allowfullscreen></iframe></div></div>\'><img src="assets/img/playvideo-64-64-0.png" class="img-responsive"></a>');
     //     }
     //   }
     // });
