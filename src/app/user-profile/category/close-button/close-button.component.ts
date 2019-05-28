@@ -13,7 +13,7 @@ export class CloseButtonComponent implements OnInit {
   }
 
   public contains(e) {
-    if (this.closeBtn.nativeElement.contains(e.target)) { return true; }
+    if (this.closeBtn.nativeElement.contains(e.target)) return true;
     return false;
   }
 }

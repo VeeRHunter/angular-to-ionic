@@ -8,9 +8,9 @@ describe('CloseButtonComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [CloseButtonComponent]
+      declarations: [ CloseButtonComponent ]
     })
-      .compileComponents();
+    .compileComponents();
   }));
 
   beforeEach(() => {

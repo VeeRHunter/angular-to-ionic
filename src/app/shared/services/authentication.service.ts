@@ -26,9 +26,9 @@ export class AuthenticationService {
   public isAuthenticated() {
     this.cookieService.set('test', 'asas');
     const remember = this.cookieService.get('remember_manager_59ba36addc2b2f9401580f014c7f58ea4e30989d');
-    console.log('cookie', remember);
+    console.log("cookie", remember);
     return true;
-    // return remember? true : false;
+    //return remember? true : false;
   }
 
 }

@@ -17,7 +17,7 @@ declare var $: any;
 					':leave',
 					[style({ 'margin-top': '0%' }), animate('0.3s', style({ 'margin-top': '100%' }))], { optional: true }
 				),
-				query(
+				query( 
 					':enter',
 					[style({ 'margin-top': '-100%' }), animate('0.3s', style({ 'margin-top': '0%' }))], { optional: true }
 				),
@@ -27,11 +27,11 @@ declare var $: any;
 			transition('* => *', group([
 				query(
 					':leave',
-					[style({ opacity: '1' }), animate('0.3s', style({ opacity: '0' }))], { optional: true }
+					[style({ 'opacity': '1' }), animate('0.3s', style({ 'opacity': '0' }))], { optional: true }
 				),
 				query(
 					':enter',
-					[style({ opacity: '0' }), animate('0.3s', style({ opacity: '1' }))], { optional: true }
+					[style({ 'opacity': '0' }), animate('0.3s', style({ 'opacity': '1' }))], { optional: true }
 				),
 			])),
 		]),
@@ -41,7 +41,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 	title = 'cpg';
 	filterData: FormGroup;
 	search: string = null;
-	isUserList = false;
+	isUserList: boolean = false;
 	filterForm = new FormGroup({
 		search: new FormControl(''),
 		fromAge: new FormControl(''),
@@ -59,42 +59,42 @@ export class AppComponent implements OnInit, AfterViewInit {
 	constructor(
 		private router: Router,
 		public pageStatusService: PageStatusService
-	) { }
+	) {};
 
 	ngOnInit() {
-		$('#main-nicescrollable').niceScroll({
-			cursorcolor: '#216a94',
+		$("#main-nicescrollable").niceScroll({
+			cursorcolor: "#216a94",
 			cursorborder: '#216a94',
 			autohidemode: true,
-			background: '#aaa',
+			background: "#aaa",
 			cursorminheight: 15,
 			cursorborderradius: 15,
 			cursorwidth: 6,
 			cursoropacitymin: 0.1,
 		});
-	}
-	ngAfterViewInit() {
+	}; 
+	ngAfterViewInit(){
 
 		setInterval(() => {
-			$('#main-nicescrollable').getNiceScroll().resize();
+			$("#main-nicescrollable").getNiceScroll().resize();
 			this.playBackground();
 		}, 100);
 	}
 
-	playBackground() {
-		const playPromise = $('#video')[0].play();
+	playBackground(){
+		var playPromise = $("#video")[0].play();
 		if (playPromise !== undefined) {
 			playPromise.then(_ => {
 			})
-				.catch(error => {
-				});
+			.catch(error => {
+			});
 		}
 	}
 
 	prepareRoute(outlet: RouterOutlet) {
-		return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
+		return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
 	}
-
+	
 	onFilter(filterData) {
 		this.filterForm = filterData;
 		this.search = this.filterForm.value.search;

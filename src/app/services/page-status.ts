@@ -4,15 +4,15 @@ import { Injectable } from '@angular/core';
 })
 export class PageStatusService {
 
-  public status = '';
+  public status:string  = '';
 
   constructor() { }
 
-  public setStatus(status: string) {
+  public setStatus(status:string){
     this.status = status;
   }
 
-  public getStatus(): string {
+  public getStatus(): string{
     return this.status;
   }
 }

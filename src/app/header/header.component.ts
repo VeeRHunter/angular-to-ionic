@@ -13,8 +13,8 @@ export class HeaderComponent implements OnInit {
 	constructor(
 		private navigationComponent: NavigationComponent,
 		private location: Location,
-		public router: Router,
-	) { }
+    public router: Router,
+	) {}
 
 	ngOnInit() {
 		console.log(this.router.url);

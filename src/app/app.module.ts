@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-// components
+//components
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { HeaderComponent } from './header/header.component';
@@ -14,12 +14,12 @@ import { FilterComponent } from './navigation/filter/filter.component';
 import { UserListsComponent } from './user-lists/user-lists.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 
-// services
+//services
 import { UserListsService } from './user-lists/user-lists.service';
-import { FilterService } from './navigation/filter/filter.service';
+import { FilterService } from  './navigation/filter/filter.service';
 import { UserProfileService } from './user-profile/user-profile.service';
 import { AppHttpClient } from './http-client';
-import { PageStatusService } from './services/page-status';
+import { PageStatusService } from  './services/page-status';
 import { Ng2CarouselamosModule } from './ng2-carouselamos';
 import { CategoryComponent } from './user-profile/category/category.component';
 // import { CloseButtonComponent } from './user-profile/category/close-button/close-button.component';
@@ -106,10 +106,15 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
       useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
     }
   ],
-  // tslint:disable-next-line:object-literal-sort-keys
   exports: [
     MatGridListModule,
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+providers: [
+  {
+    provide: PERFECT_SCROLLBAR_CONFIG,
+    useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+  }
+]
