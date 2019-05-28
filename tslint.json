@@ -67,10 +67,24 @@
     "use-host-property-decorator": true,
     "no-input-rename": true,
     "no-output-rename": true,
+    "indent": [
+      false,
+      "spaces"
+    ],
     "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,
     "one-variable-per-declaration": false,
-    "component-class-suffix": [true, "Page", "Component"],
+    "component-class-suffix": [
+      true,
+      "Page",
+      "Component"
+    ],
+    "variable-name": [
+      false,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore"
+    ],
     "directive-class-suffix": true
   }
 }

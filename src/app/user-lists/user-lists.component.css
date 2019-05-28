@@ -1,0 +1,150 @@
+@media (max-width: 769px) {
+    .listaJugadores .jugador {
+        display: none;
+    }
+    .page-header{
+        display: block !important;
+        text-align: center;
+    }
+    .listaJugadores > div{
+        width: 80%;
+        margin: 0px auto;
+    }
+}
+
+@media (min-width: 769px) {
+    .listaJugadores .jugador-small {
+        display: none;
+    }
+
+}
+.contentsNext{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.listaJugadores .jugador-small {
+    height: 115px;
+    width: 100%;
+    border-radius: 4px;
+    background: rgba(0,0,0,0.44);
+    box-shadow: 0 2px 13px 0 rgba(0,0,0,0.6);
+    padding: 0px 12px;  
+    margin-bottom: 8px;
+}
+.posicion{
+    text-transform: capitalize;
+}
+
+.listaJugadores .jugador-small .profileTableImg {
+    margin-top: 10px;
+    margin-right: 35px;
+    width: 95px;
+    height: 95px;
+    float: left;
+}
+
+.listaJugadores .jugador-small .perfilDetalle {
+    border-radius: 4px;
+    padding: 5px 0px;
+    background: unset;
+    overflow: hidden;
+    box-shadow: unset;
+}
+
+.listaJugadores .jugador-small .media-tag {
+    position: absolute;
+    margin-left: 90px;
+    height: 100%;
+    width: 16px;
+    padding: 8px 0px;
+}
+
+.listaJugadores .jugador-small .media-tag .material-icons {
+    font-size: 1em;
+}
+
+.listaJugadores .jugador-small .nombreBox {
+    margin: unset;
+    padding: unset
+}
+
+.listaJugadores .jugador-small .nombreBox p {
+    color: #FFFFFF;
+    font-family: Karla;
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin: unset;
+}
+
+.listaJugadores .jugador-small .npPdRight {
+    padding: unset;
+}
+
+.col-sm-12 {
+    width: 100%;
+}
+
+
+/*Small Displays (Iphone 5, Samsung)*/
+@media (max-width: 768px) and (max-height: 670px){
+
+}
+/*Bigger Mobil Displays (Iphon 6, Pixel, Etc)*/
+@media (max-width: 768px) and (min-height: 670px){
+
+}
+ /*Ipad Only*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    h2.page-header{
+        font-size: 2em;
+    }
+    .listaJugadores{
+        padding:  0px 3%;
+        justify-content: space-evenly;
+    }
+    .listaJugadores > div{
+        width: 45%;
+        margin-bottom: 15px;
+        height: auto !important;
+    }
+    .listaJugadores .jugador-small{
+        height: auto;
+        min-height: 160px;
+        padding: 0px 6px;
+    }
+    .listaJugadores .jugador-small .profileTableImg {
+        margin-top: 20px;
+        margin-left: 5px;
+        margin-right: 15px;
+        width: 125px;
+        height: 125px;
+    }
+    .listaJugadores .jugador-small .media-tag{
+        margin-left: 112px;
+    }
+    .listaJugadores .jugador-small .nombreBox p {
+        font-size: 1.5em;
+        line-height: 1.1em;
+        margin: 0px 0px 10px 0px;
+    }
+    .listaJugadores .jugador-small .media-tag .material-icons {
+        font-size: 1.2em;
+    }
+
+}
+
+/* Desktop*/
+@media (min-width: 768px) and (min-height: 670px){
+    .nombreBox h2{
+        font-size: 1.1em;
+    }
+    .perfilDetalle .subHeader, .perfilDetalle .detalle, .posicion, .ubicacion {
+        font-size: 0.8em;
+    }
+    .page-header{
+        margin-top: -40px;
+    }
+}
