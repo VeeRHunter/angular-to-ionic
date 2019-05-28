@@ -11,12 +11,13 @@ export class UserGuard implements CanLoad, CanActivate, CanActivateChild {
   constructor(
     private router: Router,
     private authenticationService: AuthenticationService,
-		private location: Location,
-  ) {}
+    private location: Location,
+  ) { }
 
   canLoad(route: Route): boolean | Observable<boolean> | Promise<boolean> {
     if (!this.authenticationService.isAuthenticated()) {
       this.router.navigateByUrl('/login');
+      // tslint:disable-next-line:no-debugger
       debugger;
       return false;
     }
@@ -28,11 +29,11 @@ export class UserGuard implements CanLoad, CanActivate, CanActivateChild {
     state: RouterStateSnapshot
   ): boolean | Observable<boolean> | Promise<boolean> {
     if (!this.authenticationService.isAuthenticated()) {
-      //window.open('www.clickpassgoal.com/login', '_blank');
-      //console.log("isNotAuthenticatedisAuthenticated");
+      // window.open('www.clickpassgoal.com/login', '_blank');
+      // console.log("isNotAuthenticatedisAuthenticated");
       return false;
     }
-   // console.log("isAuthenticated");
+    // console.log("isAuthenticated");
     return true;
   }
 
@@ -42,6 +43,7 @@ export class UserGuard implements CanLoad, CanActivate, CanActivateChild {
   ): boolean | Observable<boolean> | Promise<boolean> {
     if (!this.authenticationService.isAuthenticated()) {
       this.router.navigateByUrl('/login');
+      // tslint:disable-next-line:no-debugger
       debugger;
       return false;
     }

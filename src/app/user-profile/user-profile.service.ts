@@ -7,38 +7,38 @@ import { catchError, map, tap } from 'rxjs/operators';
 import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
 
 const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+	headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 @Injectable()
 export class UserProfileService extends AppHttpClient {
 
 	private userlistsUrl = environment.serverUrl + '/dashboard';
-	public images:any = [];
-	public playVideoFlag: boolean = false;
-	public showImageFlag: boolean = false;
+	public images: any = [];
+	public playVideoFlag = false;
+	public showImageFlag = false;
 	public selectedVideo: any = '';
 	public iframeSrcUrl: SafeUrl;
 	public imageSrcUrl: string;
 
-	public getUserProfile(slug: string, type: number): Observable < any > {
-		let url = this.userlistsUrl + "/getUserProfile";
-		return this.post(url, {
-			'slug': slug,
-			'type': type
-		});
-	}
-	
-	public getUserMedia(slug: string, type: number): Observable < any > {
-		let url = this.userlistsUrl + "/getUserMedia";
+	public getUserProfile(slug: string, type: number): Observable<any> {
+		const url = this.userlistsUrl + '/getUserProfile';
 		return this.post(url, {
 			'slug': slug,
 			'type': type
 		});
 	}
 
-	public requestPlayer(selectedIds: string[]): Observable < any > {
-		let userId = 10;
-		let url = environment.serverUrl + "/request-player";
+	public getUserMedia(slug: string, type: number): Observable<any> {
+		const url = this.userlistsUrl + '/getUserMedia';
+		return this.post(url, {
+			'slug': slug,
+			'type': type
+		});
+	}
+
+	public requestPlayer(selectedIds: string[]): Observable<any> {
+		const userId = 10;
+		const url = environment.serverUrl + '/request-player';
 		return this.post(url, {
 			'selectedIds': selectedIds,
 			'userId': userId
