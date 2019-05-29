@@ -1,4 +1,4 @@
-<div class="row clear">
+<div class="clear">
     <div class="col-sm-12">
         <div class="lds-roller" *ngIf="!is_details_loaded">
         </div>
@@ -12,7 +12,7 @@
                 <div class="listaJugadores">
                     <div *ngFor="let jugador of user_lists; let i = index">
                         <div class="animated jugador hasLink"
-                            [ngClass]="{'pulse': i == selected_index, 'jackInTheBox': i != selected_index}"
+                            [ngClass]="{'pulse': i == selected_index, 'FadeIn': i != selected_index}"
                             (click)="gotoUserProfile(jugador, i)">
                             <div class="perfilImagen">
                                 <img *ngIf="!jugador.link_img" src="assets/img/default.png" class="profileTableImg">
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         <div class="animated delay-0s jugador-small hasLink"
-                            [ngClass]="{'pulse': i == selected_index, 'jackInTheBox': i != selected_index}"
+                            [ngClass]="{'pulse': i == selected_index, 'FadeIn': i != selected_index}"
                             (click)="gotoUserProfile(jugador, i)">
                             <div class="perfilImagen">
                                 <img *ngIf="! jugador.link_img" src="assets/img/default.png" class="profileTableImg">

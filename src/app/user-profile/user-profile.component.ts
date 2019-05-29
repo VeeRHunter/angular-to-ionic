@@ -128,8 +128,8 @@ export class UserProfileComponent implements OnInit {
 		this.is_details_loaded = false;
 		this.userProfileService.getUserProfile(this.slug, type).subscribe(jugador => {
 			this.jugador = jugador;
-			console.log('player', this.jugador);
-			console.log('slug', this.slug);
+			// console.log("player", this.jugador);
+			// console.log("slug", this.slug);
 			this.is_details_loaded = true;
 			this.slug = this.jugador.slug;
 			setTimeout(() => this.openedCategory[0] = true, 750);

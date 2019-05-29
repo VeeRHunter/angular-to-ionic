@@ -44261,9 +44261,6 @@ p {
     box-shadow: none;
 }
 
-.main-panel {
-    width: calc(100% - 320px);
-}
 
 .sidebar {
     background-color: rgba(0, 0, 0, 0.3);
@@ -44439,16 +44436,9 @@ select.customInput {
     padding-bottom: 0px;
 }
 
-.filter-menu {
-    height: 100%;
-    overflow-y: auto;
-}
-
 .sidePd1 {
     /*margin: 0px 20px;*/
     padding: 0px 30px;
-    max-height: 550px;
-    overflow-y: auto;
 }
 
 .photo {
@@ -44715,31 +44705,6 @@ select.customInput {
     padding-right: 0px;
 }
 
-.listaJugadores {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.listaJugadores .jugador {
-    margin: 0 6px 14px 6px;
-    max-width: 229px;
-    color: #ffffff;
-    padding-top: 15px;
-    cursor: pointer;
-    -webkit-transition: .2s ease-in-out;
-    transition: .2s ease-in-out;
-}
-
-.listaJugadores .jugador:hover {
-    background: rgba(0, 0, 0, 0.44);
-    overflow: hidden;
-    box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.6);
-}
-
 .openBox {
     color: #ffffff;
 }
@@ -44754,30 +44719,6 @@ select.customInput {
 
 .lightBlue {
     color: #B0E4EC;
-}
-
-.perfilImagen img {
-    width: 150px;
-    height: 150px;
-    border-radius: 100px;
-    margin-bottom: 10px;
-}
-
-.clear {
-    clear: both;
-}
-
-.perfilDetalle {
-    border-radius: 4px;
-    padding: 5px 0px;
-    background: rgba(0, 0, 0, 0.44);
-    overflow: hidden;
-    box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.6);
-}
-
-.perfilImagen {
-    text-align: center;
-    position: relative;
 }
 
 .npPdRight {
@@ -44824,7 +44765,8 @@ select.customInput {
     color: #f6bb42;
 }
 
-.mediocampista {
+.mediocampista,
+.mediocampo {
     color: #35d48e;
 }
 
@@ -44852,4 +44794,11 @@ select.customInput {
 
 .btn-want {
     background: url('/img/World-cup.svg');
+}
+
+@media (min-width: 900px) {
+    .main-panel {
+        width: calc(100% - 320px);
+    }
+
 }

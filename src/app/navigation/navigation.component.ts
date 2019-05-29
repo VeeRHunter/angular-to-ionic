@@ -26,6 +26,7 @@ export class NavigationComponent implements OnInit {
       cursorcolor: '#216a94',
       cursorborder: '#216a94',
       autohidemode: true,
+      horizrailenabled: false,
       background: '#aaa',
       cursorminheight: 15,
       cursorborderradius: 15,

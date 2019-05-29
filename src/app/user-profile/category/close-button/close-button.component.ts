@@ -16,4 +16,8 @@ export class CloseButtonComponent implements OnInit {
     if (this.closeBtn.nativeElement.contains(e.target)) { return true; }
     return false;
   }
+
+  onClose() {
+    // this.navigationComponent.gotoHome();
+  }
 }

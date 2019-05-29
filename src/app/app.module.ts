@@ -22,7 +22,7 @@ import { AppHttpClient } from './http-client';
 import { PageStatusService } from './services/page-status';
 import { Ng2CarouselamosModule } from './ng2-carouselamos';
 import { CategoryComponent } from './user-profile/category/category.component';
-// import { CloseButtonComponent } from './user-profile/category/close-button/close-button.component';
+import { CloseButtonComponent } from './user-profile/category/close-button/close-button.component';
 
 import { PerfectScrollbarModule, PerfectScrollbarConfigInterface, PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 
@@ -44,6 +44,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     UserProfileComponent,
     CategoryComponent,
     PhotoSwipeComponent,
+    CloseButtonComponent,
   ],
   imports: [
     BrowserModule,

@@ -5,7 +5,7 @@
     background-color: #000;
 }
 
-.main-panel{
+.main-panel {
     height: 100%;
 }
 
@@ -17,29 +17,34 @@
     .search-box {
         display: none;
     }
-    #video{
+
+    #video {
         margin-top: -180px;
         margin-left: -120px;
     }
 }
+
 .main-panel>.content {
     padding-top: unset;
 }
+
 @media (max-width: 768px) {
     form {
         padding: 0px 7%;
     }
-    #video{
-        left: -520px;
+
+    #video {
+        left: -670px;
+        top: -190px;
     }
 }
 
-.video{
+.video {
     position: absolute;
 }
 
 
-#video{
+#video {
     position: relative;
     min-width: 100%;
     min-height: 100%;

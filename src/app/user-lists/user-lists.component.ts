@@ -92,7 +92,7 @@ export class UserListsComponent implements OnInit {
 	gotoUserProfile(jugador: UserList, i) {
 		this.is_closed = true;
 		this.selected_index = i;
-		setTimeout(() => this.router.navigate(['/user-profile/', jugador.slug]), 400);
+		setTimeout(() => this.router.navigate(['/user-profile/', jugador.slug]), 3);
 	}
 
 	getUbicacion(provincia, code) {

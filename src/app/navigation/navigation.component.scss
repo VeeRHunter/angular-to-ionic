@@ -2,6 +2,10 @@
     position: fixed;
 }
 
+.mat-checkbox {
+    //margin-top: 3px;
+}
+
 @media (max-width: 900px) {
     .sidebar {
         left: -320px !important;
@@ -30,6 +34,14 @@
     .logo {
         display: none;
     }
+
+}
+
+// Small Displays (Iphone 5, Samsung)
+@media (max-width: 380px) and (max-height: 670px) {
+    .sidebar {
+        margin-top: 0px !important;
+    }
 }
 
 .sidebar {
@@ -52,5 +64,9 @@
                 color: #fff;
             }
         }
+    }
+
+    .sidebar-wrapper {
+        overflow-x: hidden !important;
     }
 }
