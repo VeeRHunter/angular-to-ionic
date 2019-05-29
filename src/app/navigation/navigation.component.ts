@@ -10,9 +10,10 @@ declare var $: any;
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
-  menu_opened: boolean = false;
-  
-  @Input('search') search:string;
+  menu_opened = false;
+
+  // tslint:disable-next-line:no-input-rename
+  @Input('search') search: string;
   @Output() filterData = new EventEmitter<FormGroup>();
 
   constructor(
@@ -21,19 +22,19 @@ export class NavigationComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    $(".nicescrollable").niceScroll({
-			cursorcolor: "#216a94",
-			cursorborder: '#216a94',
-			autohidemode: true,
-			background: "#aaa",
-			cursorminheight: 15,
-			cursorborderradius: 15,
-			cursorwidth: 6,
-			cursoropacitymin: 0.1,
-		});
-		$(".nicescrollable").mouseover(function () {
-			$(".nicescrollable").getNiceScroll().resize();
-		});
+    $('.nicescrollable').niceScroll({
+      cursorcolor: '#216a94',
+      cursorborder: '#216a94',
+      autohidemode: true,
+      background: '#aaa',
+      cursorminheight: 15,
+      cursorborderradius: 15,
+      cursorwidth: 6,
+      cursoropacitymin: 0.1,
+    });
+    $('.nicescrollable').mouseover(function () {
+      $('.nicescrollable').getNiceScroll().resize();
+    });
   }
 
   public gotoHome() {
@@ -49,6 +50,6 @@ export class NavigationComponent implements OnInit {
   }
 
   goBack() {
-		this.location.back();
-	}
+    this.location.back();
+  }
 }

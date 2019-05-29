@@ -17,12 +17,10 @@
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="FadeSplashScreenDuration" value="300" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
-    <preference name="ShowSplashScreenSpinner" value="true" />
     <preference name="SplashScreen" value="screen" />
-    <preference name="AutoHideSplashScreen" value="false" />
     <preference name="AllowInlineMediaPlayback" value="true" />
     <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
-    <preference name="SplashScreenDelay" value="1000" />
+    <preference name="SplashScreenDelay" value="16000" />
     <preference name="loadUrlTimeoutValue" value="700000" />
     <platform name="android">
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application" xmlns:android="http://schemas.android.com/apk/res/android">
